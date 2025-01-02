@@ -1,340 +1,80 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <meta http-equiv="imagetoolbar" content="no">
-    <meta name="copyright" content="Digital Arts Inc.">
-    <meta name="keywords" content="標的型攻撃対策,標的型メール攻撃対策,漏洩対策,情報漏洩対策">
-    <meta name="description" content="DigitalArts@Cloudはホワイト運用を行い、Webセキュリティとメールセキュリティ、ファイルセキュリティをクラウドでご提供します。">
-    <title>DigitalArts@Cloud｜デジタルアーツ株式会社</title>
-    <link rel="apple-touch-icon" href="/common/images/apple_touch_icon.png">
-    <link rel="index" href="https://www.daj.jp/" title="情報漏えい対策・情報セキュリティならデジタルアーツ株式会社">
-    <link rel="contents" href="https://www.daj.jp/sitemap/" title="サイトマップ">
-    <noscript><link rel="stylesheet" type="text/css" href="/common/css/noscript.css"></noscript>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	<script type="text/javascript" src="/common/js/jquery.cookie.js"></script>
-    <script type="text/javascript" src="/common/js/default.js?20240930102149"></script>
-    <script type="text/javascript" src="/common/js/lightbox.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="/bs/datcloud/common/css/share.css?20230810030259" media="screen,print" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="/common/js/jquery.slidemenu.js"></script>
-    <script type="text/javascript" src="/common/js/responsive.js"></script>
-    <script> (function($) { var responsiveW = '768'; /* iPadサイズは1024 */ $(function() { var userAgent = window.navigator.userAgent.toLowerCase(); if (userAgent.indexOf('msie') == -1) { //IE除外 responsive(); $(window).on('resize', responsive); } }); function responsive() { //ブラウザサイズ1024以下のスマートデバイス if (window.matchMedia('screen and (max-width: ' + responsiveW + 'px)').matches) { //固定メニュー対応（body直下にしないとposition:fixedが効かない） $('#header').prependTo('body').width('auto'); } else { $('#header').prependTo('#wrapper'); } } })(jQuery); </script>
-        <link rel="stylesheet" type="text/css" href="/bs/datcloud/common/css/base.css?20230803050501" media="screen,print">
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--meta-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
+<meta http-equiv="content-language" content="ja" />
+<meta name="author" content="デジタルアーツ株式会社" lang="ja" xml:lang="ja" />
+<meta name="copyright" content="Digital Arts Inc. All rights reserved." />
+<meta name="x-inettv-content" content="ifilter" />
+<title>i-フィルター ログイン</title>
+<link href="/login/favicon.ico" type="image/x-icon" rel="icon" />
+<link href="/login/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+<script type="text/javascript" src="/login/js/util.js"></script>
+<script type="text/javascript" src="/login/js/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/login/css/pc_no_login.css" />
+<!-- begin UA -->
+<script type="text/javascript"> <!-- var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-18711915-1']); _gaq.push(['_trackPageview']); (function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })(); //--> </script>
+<!-- begin GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12542238-1"></script>
-<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-12542238-1'); </script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-5CLK2F9');</script>
-<!-- End Google Tag Manager -->
-    <!-- SMP Tracking Tag Ver 3 -->
-    <script type="text/javascript"> <!-- (function(n){ var w = window, d = document; w['ShanonCAMObject'] = n, w[n] = w[n] || function(){(w[n].q=w[n].q||[]).push(arguments)}; w[n].date = 1*new Date(); var e = d.createElement('script'), t = d.getElementsByTagName('script')[0]; e.async = 1, e.type='text/javascript', e.charset='utf-8', e.src = 'https://tracker.smartseminar.jp/static/js/cam3.js' + "?_=" + w[n].date; t.parentNode.insertBefore(e,t); })('_cam'); _cam('create', 'TeppuCiMYY-381', ['daj.jp','finalcode.com']); _cam('require', 'crossLinker'); _cam('crossLinker:allLink', ['daj.jp','finalcode.com']); _cam('send'); //--> </script>
-
+<script type="text/javascript"> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-12542238-1'); </script>
 </head>
-<body id="bs-datcloud" class="bs datcloud"> 
-  
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5CLK2F9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->	  
-
-    <nav class="slidemenu">
-        <div id="menu_contents">
-            <div id="menu_list">
-                <h3><a href="https://www.daj.jp/">情報漏えい対策ならデジタルアーツ株式会社（Digital Arts）</a></h3>
-                <p class="close"><a href="javascript:void(0);"><img src="/common/images/header/close.svg" alt="閉じる" /></a></p>
-            <ul class="otherMenu rightsub">
-        <li><a href="/company/">企業・IR・採用</a></li>
-        <li class="mnContact"><a href="/contact/">お問い合わせ</a></li>
-        <li><a href="/en/">English</a></li>
-    </ul>
-    <ul class="otherMenu rightsub">
-        <li><a href="/#solution">ソリューション</a></li>
-        <li><a href="/bs/case/">導入事例</a></li>
-        <li><a href="/bs/video/">製品紹介動画</a></li>
-        <li><a href="/bs/events/">イベント・セミナー</a></li>
-        <li><a href="https://mktg.daj.jp/public/application/add/6641" target="_blank" rel="nofollow">メールマガジン</a></li>
-        <li class="partner"><a href="/partner/">パートナー様</a></li>
-        <li class="support"><a href="https://download.daj.co.jp/support/?page=login">サポート</a></li>
-    </ul>
+<body style="overflow:hidden; overflow-y:hidden;">
+<style type="text/css"> div#sub_header .top_information{ float:right; text-align: right; display: inline; font-size: 16px; color:#FFFF00; width: 616px; margin-right: 24px; font-weight:bold; } div#sub_header .top_information a, div#sub_header .top_information a:hover { color:#FFFF00; background:none; } </style>
+<script type="text/javascript"> <!-- jQuery(function($){ $(document).bind("contextmenu",function(e){return false;}); checkBrowser(); $("#login_mailaddress, #login_password").blur(function(){changeLoginButtonState()}).keyup(function(){changeLoginButtonState()}); $("#login_mailaddress").focus(); }); function changeLoginButtonState() { if(($("#login_mailaddress").val() == "") || ($("#login_password").val() == "")) { $("#login").prop('disabled', true); $("#login").removeClass('login_button'); $("#login").addClass('login_button_disabled'); } else{ $("#login").prop('disabled', false); $("#login").removeClass('login_button_disabled'); $("#login").addClass('login_button'); } } function setCheckBoxState(element){ var id = element.id.substring(2);//"d_"以降切り出し var dummyElement = document.getElementById(element.id); var checkElement = document.getElementById(id); if (checkElement.checked) { dummyElement.className = "checkboxImg offstate"; checkElement.checked = false; } else { dummyElement.className = "checkboxImg onstate"; checkElement.checked = true; } } //--> </script>
+    <div id="container" class="login">
+        <div id="header" class="login">
+            <div id="messageArea" class="messagearea">
             </div>
         </div>
-    </nav>
-
-    <div id="wrapper">
-
-        <header id="header" class="hd-services">
-            <section>
-                <p class="logo"><a href="https://www.daj.jp/"><img src="/common/images/header/da.svg" alt="情報漏えい対策ならデジタルアーツ株式会社（Digital Arts）" /></a></p>
-        <ul class="otherMenu rightsub">
-        <li><a href="/company/">企業・IR・採用</a></li>
-        <li class="mnContact"><a href="/contact/">お問い合わせ</a></li>
-        <li><a href="/en/">English</a></li>
-    </ul>
-    <ul class="otherMenu rightsub">
-        <li><a href="/#solution">ソリューション</a></li>
-        <li><a href="/bs/case/">導入事例</a></li>
-        <li><a href="/bs/video/">製品紹介動画</a></li>
-        <li><a href="/bs/events/">イベント・セミナー</a></li>
-        <li><a href="https://mktg.daj.jp/public/application/add/6641" target="_blank" rel="nofollow">メールマガジン</a></li>
-        <li class="partner"><a href="/partner/">パートナー様</a></li>
-        <li class="support"><a href="https://download.daj.co.jp/support/?page=login">サポート</a></li>
-    </ul>
-            <nav class="hdr_nav">
-                </nav>
-            <ol class="smph_menu"><li><a href="javascript:void(0);">menu</a></li></ol>
-        </section>
-    </header>
-
-        <div id="breadCrumb">
-    <ul>
-        <li><a href="https://www.daj.jp/">HOME</a></li>
-                                    <li>&gt;&nbsp;DigitalArts@Cloud</li>
-                        </ul>
-</div>
-        <div id="contents">
-
-            
-
-
-<div id="main">
-
-<input type="checkbox" id="menu-btn-check">
-<label for="menu-btn-check" class="menu-btn smph_menu"></label>
-<div class="sub_menu">
-    <ul class="column justify-content-center"">
-        <li><a href=" /bs/datcloud/" class="sub_menu_current">「DigitalArts@Cloud」トップ</a></li>
-        <li><a href="/bs/datcloud/ifatcloud/" >「i-FILTER＠Cloud」</a></li>
-        <li><a href="/bs/datcloud/mfatcloud/" >「m-FILTER＠Cloud」</a></li>
-        <li><a href="/bs/datcloud/fcatcloud/" >「FinalCode＠Cloud」</a></li>
-    </ul>
-    <ul class="column justify-content-center">
-        <li><a href="/bs/price/" target="_blank">製品価格</a></li>
-        <li><a href="/bs/case/?product=datcloud" target="_blank">導入事例</a></li>
-        <li><a href="/bs/requirements/#dacloud" target="_blank">動作環境</a></li>
-        <li><a href="https://www.daj.jp/support/atcloud_slo/" target="_blank">サービスレベル目標（SLO）</a></li>
-        <li><a href="/bs/serverlist/#ifacloud" target="_blank">通信先一覧</a></li>
-    </ul>
-</div><ul class="sub_menu2">
-    <li><a href="/redirect/icata/iportal/oc.do?v=DAJ00001&c=Cloud&d=DAJD001" target="_blank">デジタルカタログ</a></li>
-    <li><a href="/bs/prmt/#dacloud">導入検討資料ダウンロード</a></li>
-    <li><a href="/redirect/sec2/bs/trial/ac/">無料試用版お申し込み</a></li>
-    <li><a href="/bs/inquiry/">お問い合わせ・資料請求</a></li>
-</ul>
-
-    <section>
-
-<h1>
-    <div id="img-wrap" class="effect-fade">
-        <img src="/bs/datcloud/common/images/datcloud_dome_01.png?3" alt="Web・メール・ファイルを網羅したクラウドセキュリティで外部攻撃対策＆業務効率化" class="main-img" />
-        <ul class="visual-banner">
-            <li>
-                <a href="/bs/lp/avsb/"><img src="/bs/lp/avsb/common/images/banner_AVSB_316x80_202303.svg" alt="Anti-Virus & Sandbox" /></a>
-            </li>
-        </ul>
-    </div>
-</h1>
-<section id="datcloud">
-    <div id="problems-with-telecommuting">
-        <h2>テレワークの課題</h2>
-        <div class="column effect-fade">
-            <div>
-                <h3 class="col12"><span>1</span><br />社外ネットワーク環境による悪性URLへのアクセスや情報漏洩</h3>
-                <p class="col9 left">セキュリティ対策がなされた社内環境でさえ感染するリスクがあるほど巧妙になっている悪性URL、社外ネットワーク環境による悪性URLへのアクセスはさらに危険度が増します。</p>
-            </div>
-            <div class="col12">
-                <figure class="mt0 mb50">
-                    <img src="/bs/datcloud/common/images/datcloud_telework_01.svg" alt="テレワークの課題 社外ネットワーク環境による悪性URLへのアクセスや情報漏洩" />
-                </figure>
-            </div>
-        </div>
-        <div class="column effect-fade">
-            <div>
-                <h3 class="col12"><span>2</span><br />社用端末の私的利用</h3>
-                <p class="col9 left">テレワークでは、社用端末を配布して業務を実施するケースが増えますが、従業員の意識次第で業務外の利用ができてしまうため業務遅延などにもつながる可能性があります。</p>
-            </div>
-            <div class="coln4">
-                <figure class="mt0 mb50">
-                    <img src="/bs/datcloud/common/images/datcloud_telework_03.svg" alt="テレワークの課題 社用端末の私的利用" />
-                </figure>
+        <div id="content">
+            <div id="sub_container">
+                <div id="sub_header" style="height: 24px; margin-top: 0px; line-height: 24px; color: #ffffff; font-size:17px; font-weight:bold; padding-left:26px; width:758px;">
+                    <div style="float: left; _display: inline;">ログイン</div>
+                    <div class="top_information"><a href="https://www.daj.jp/cs/info/2021/0514/" target="_blank">【重要】「i-フィルター」のサポート対象OS変更について</a></div>
+                </div>
+                <div id="sub_main">
+                    <form id="login_form" name="loginForm" method="post" action="/login/index.php">
+                    <input type="hidden" name="cmd" value="do_login"/>
+                        <div style="width: 784px; height: 44px; float: left; _display: inline;">
+                        </div>
+                        <div style="height: 30px; width:608px; margin-top:12px; margin-left: 176px; float: left; _display: inline;">
+                            <div class="input text">
+                                <label for="login_mailaddress"></label>
+                                                                    <input name="login_mailaddress_text" type="text" id="login_mailaddress" maxLength="100" autocomplete="off" value="" />
+                                                            </div>
+                            <div style="margin-top:5px; margin-left: 80px;" id="d_set_mail" class="checkboxImg offstate" onclick="setCheckBoxState(this);"></div>
+                            <div style="margin-top:-13px; margin-left: 98px; font-weight: bold; color: #187FC3; font-size: 13px;">次回からE-Mailアドレスの入力を省略する</div>
+                            <input style="display: none;" id="set_mail" type="checkbox" name="login_mailaddress_set" value="ok" >
+                        </div>
+                        <div style="height: 30px; width:608px; margin-top:58px; margin-left: 176px; float: left; _display: inline;">
+                            <div class="input password">
+                                <label for="login_password"></label>
+                                <input type="password" name="login_password_text" id="login_password" value="" maxLength="15" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div align="center" style="margin-top:4px; height: 20px; width: 784px; float: left; _display: inline;">
+                            <a href="https://sec2.daj.co.jp/ifilter/ifp/support/resetpassword.php?from=setting" name="forgot" class="forgot_password">&gt;&gt; 管理パスワードをお忘れの方はこちら</a>
+                        </div>
+                        <div style="padding-top:20px; height:60px; padding-left: 168px; padding-right: 166px; width: 450px; float: left; _display: inline;">
+                            <div style="padding: 14px; height: 46px; width: 100%; font-size: 11px;">
+                                <p>ログイン後、以下の設定、お手続きを行うことができます。</p>
+                                <p style="font-weight: bold; color: #187FC3;">●&nbsp;各種フィルタリング設定&nbsp;&nbsp;&nbsp;●&nbsp;お客さま登録情報の確認、変更</p>
+                                <p>ウェブ管理ページをご利用いただけるサービスは、<a href="/login/index.php?page=about" style="background-color: transparent;">こちら</a>&nbsp;よりご確認ください。</p>
+                            </div>
+                        </div>
+                        <div style="padding-top:30px; padding-left: 24px; height:74px; width: 238px; float: left; _display: inline; text-align: center;">
+                            <a href="https://i-filter.jp/smph/login" style="float: left; margin-top: 8px; margin-left: 24px;">iOS専用シリアルIDによる<br>ログイン画面はこちら</a>
+                        </div>
+                        <div style="padding-top:30px; height:74px; width: 522px; float: left; _display: inline;">
+                            <input type="submit" id="login" name="login" class="login_button_disabled" disabled="disabled" value="　"/>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <div id="solutions">
-        <h2>DigitalArts@Cloud で在宅勤務の課題を解決</h2>
-        <p class="lead_text effect-fade lineHeight-15"><strong>在宅勤務・テレワークにおけるWeb・メール・ファイルのセキュリティをクラウドサービスで提供します。</strong></p>
-        <h3>DigitalArts@Cloud</h3>
-        <div class="column mb30 effect-fade">
-            <div class="col4">
-                <h4>セキュリティ</h4>
-                <ul class="link_products">
-                    <li><a href="/bs/datcloud/ifatcloud/"><img src="/bs/common/images/product/prod_logo_ifatcloud.svg?202206" alt="i-FILTER@Cloud" /></a></li>
-                    <li><a href="/bs/datcloud/mfatcloud/"><img src="/bs/common/images/product/prod_logo_mfatcloud.svg?202206" alt="m-FILTER@Cloud" /></a></li>
-                    <li><a href="/bs/datcloud/fcatcloud/"><img src="/bs/common/images/product/prod_logo_fcatcloud.svg?202206" alt="FinalCode@Cloud" /></a></li>
-                </ul>
-            </div>
-            <div class="col4">
-                <h4>業務効率化</h4>
-                <ul class="link_products">
-                    <li><a href="/bs/datcloud/ifatcloud/"><img src="/bs/common/images/product/prod_logo_ifatcloud.svg?202206" alt="i-FILTER@Cloud" /></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="atcloud_value">
-    <h2><b><span>｢DigitalArts@Cloud」の<strong>3つのバリュー</strong></span></b></h2>
-    <div class="column effect-fade">
-        <dl class="col12 left">
-        <dt><b>01</b>Webもメールも意識せずに、すべてを安全に閲覧。</dt>
-        <dd class="mb30">
-            <p>人の目で判別できない攻撃も、「i-FILTER@Cloud」と「m-FILTER@Cloud」が自動で無害化。ひとつの製品で、外部攻撃対策と内部からの漏洩対策の両方をカバーし、圧倒的なコストパフォーマンスを発揮します。</p>
-        </dd>
-        </dl>
-        <dl class="col12 left">
-        <dt><b>02</b>ファイルを自動で暗号化し、コントロールを継続。</dt>
-        <dd class="mb30">
-            <p>社内業務で利用するファイルに対して自動で暗号化。運用やポリシーを考える必要なく漏洩対策を実現。また、社外に渡したファイルについてもコントロールし続けることで外部への漏洩も防ぎます。</p>
-        </dd>
-        </dl>
-        <dl class="col12 left">
-        <dt><b>03</b>Web・メール・ファイルのインシデントを即座に確認。</dt>
-        <dd class="mb30">
-            <p>「DigitalArts@Cloud」なら、統合レポート画面によりWeb・メール・ファイルにおける外部攻撃、内部情報漏洩の可能性を1画面で横断的に表示可能です。業務利用せざるを得ないWebとメールとファイルの間隙を突く攻撃も即座に確認できます。</p>
-        </dd>
-        </dl>
-    </div>
-</section>
-<section id="atcloud_isms">
-    <h2><b><span>情報セキュリティマネジメントシステム(ISMS)について</span></b></h2>
-    <div class="column effect-fade">
-      <p class="col12 left">当社は、2020年3月18日より「ISO/IEC 27001:2013」の認証を取得しています。クラウドサービスの情報セキュリティに関しても、「ISO/IEC 27017:2015」を2020年11月26日付けで下表記載のサービスにおいて認証取得しています。今後も、当社の重要な資産である情報を、情報漏えい、改ざん、又は利用できなくなる等の事態から保護し、事業を円滑に遂行するために、ISMSをはじめとする情報セキュリティに対する取り組みを推進してまいります。</p>
-    </div>
-    <figure class="mb30 effect-fade">
-        <img src="/security_policy/common/images/logo_ISMS_ANAB_JIPDEC_ISO27017.png" alt="ISO27017">
-    </figure>
-</section>
-<section id="atcloud_ismap">
-    <h2><b><span>政府情報システムのためのセキュリティ評価制度(ISMAP)</span></b></h2>
-    <div class="column effect-fade">
-      <p class="col12 left">政府情報システムのためのセキュリティ評価制度（Information system Security Management and Assessment Program: 通称、ISMAP（イスマップ））は、政府が求めるセキュリティ要求を満たしているクラウドサービスを予め評価・登録することにより、政府のクラウドサービス調達におけるセキュリティ水準の確保を図り、もってクラウドサービスの円滑な導入に資することを目的とした制度です。
-DigitalArts@Cloud及び、DeskはISMAP登録製品です。</p>
-    </div>
-    <figure class="mb30 effect-fade">
-        <a href="/security_policy/#ISMAP" target="_blank"><img src="/security_policy/common/images/icon_ismap.svg" alt="政府情報システムのためのセキュリティ評価制度(ISMAP)" width="204" height="102" /></a>
-    </figure>
-</section>
-<div class="news mt40">
-    <div>
-        <h3>｢DigitalArts@Cloud」トピックス</h3>
-    </div>
-    <ul class="effect-fade">
-<li><a href="/bs/case/case100/">｢i-FILTER@Cloud」：導入事例 相模鉄道株式会社</a></li>
-        <li><a href="/bs/case/case95/">｢i-FILTER@Cloud」：導入事例 西日本旅客鉄道株式会社</a></li>
-        <li><a href="/bs/case/case94/">｢i-FILTER@Cloud」：導入事例 株式会社ライフアシスト</a></li>
-    </ul>
-</div>
-    </section>
-
-<div id="btnBox_atcloud">
-
-    <ul class="tc dl_btn">
-        <li><a href="/bs/prmt/#dacloud">導入検討資料<br />ダウンロード</a></li>
-                    <li><a href="/redirect/sec2/bs/trial/ac/">無料試用版<br />お申し込み</a></li>
-                <li><a href="/bs/inquiry/">お問い合わせ<br />･資料請求</a></li>
-    </ul>
-
-</div><div class="event center">
-    <a href="/bs/events/"><img src="/bs/events/common/images/event_300x80.png" alt="イベント・セミナー情報" /></a>
-</div>
-<div id="footer_banner" style="display:none;">
-    <ul>
-        <li class="effect-fade rtl event_banner">
-            <a href="/bs/events/" target="_blank"><img src="/bs/events/common/images/event_300x80.png" alt="イベント・セミナー情報" /></a>
-        </li>
-        <li class="effect-fade rtl ai_banner">
-            <a href="/bs/lp/generative-ai/" target="_blank"><img src="/bs/lp/generative-ai/common/images/aichat_banner_320x85.png" alt="AIチャットフィルター「i-FILTER」生成AIの利用状況を可視化" /></a>
-        </li>
-        <li class="effect-fade rtl telework_banner">
-            <a href="/bs/datcloud/" target="_blank"><img src="/common/images/top/telework_banner_300x60.png" alt="Disitalarts@Cloud" /></a>
-        </li>
-        <li class="effect-fade rtl security_reports">
-            <a href="/security_reports/" target="_blank"><img src="/security_reports/common/images/security_reports_300x80.png" alt="セキュリティレポート" /></a>
-        </li>
-        <li class="effect-fade rtl d_content">
-            <a href="/d-content/" target="_blank"><img src="/d-content/common/images/d_content_316x84.png" alt="学習用動画ポータルサイト「Dコンテンツ」" /></a>
-        </li>
-        <li class="effect-fade rtl zipencryption">
-            <a href="/bs/lp/zipencryption/" target="_blank"><img src="/bs/lp/zipencryption/common/images/banner_zipencryption_316x84.png" alt="デジタルアーツの『脱ZIP暗号化』運用 PPAP問題を解決" /></a>
-        </li>
-        <li class="effect-fade rtl banner_dalert">
-            <a href="/bs/d-alert/" target="_blank"><img src="/bs/d-alert/common/images/banner_dalert_300x80.png" alt="サイバーリスク情報提供サービス「D アラート」" /></a>
-        </li>
-        <li class="effect-fade rtl banner_ict">
-            <a href="/bs/lp/ict/" target="_blank"><img src="/bs/lp/ict/common/images/banner_ict_320x85.png" alt="ICT教育の現場でも タブレット導入の課題と対策をご紹介" /></a>
-        </li>
-    </ul>
-</div>
-</div>
-
-
-        </div>
-
-        <footer id="footer">
-            <p id="backTotop"><a href="javascript:void(0);"><img src="/common/images/footer/totop.svg" alt="このページの先頭へ"></a></p>
-            <div class="footerContent">
-            <ul class="footerMenuList">
-                <li><a href="/"><img src="/common/images/footer/da.svg" loading="lazy" alt="Digital Arts Inc." width="100" height="25"></a></li>
-                <li><a href="/">HOME</a></li>
-                <li><a href="/bs/">企業・官公庁のお客様</a></li>
-                <li><a href="/es/">学校関係のお客様</a></li>
-                <li><a href="/cs/" target="_blank">個人のお客様（i-フィルター）</a></li>
-                <li><a href="https://download.daj.co.jp/support/" target="_blank" rel="nofollow">サポート</a></li>
-                <li><a href="/partner/">パートナー様</a></li>
-                <li><a href="/company/top/">企業情報</a></li>
-                <li><a href="/ir/">株主・投資家向け情報</a></li>
-                <li><a href="/esg/">サステナビリティ</a></li>
-                <li><a href="https://jobs.daj.jp/" target="_blank" rel="nofollow">採用情報(新卒・キャリア)</a></li>
-                <li><a href="/contact/">お問い合わせ</a></li>
-            </ul>
-            <ul class="footerSnsList">
-                <li><a href="https://twitter.com/DA_IDL" target="_blank">公式X（旧Twitter）ページ</a></li>
-                <li><a href="https://www.facebook.com/DigitalArts.Japan/" target="_blank">公式Facebookページ</a></li>
-                <li><a href="https://www.youtube.com/@DajJp" target="_blank">公式YouTubeチャンネル</a></li>
-            </ul>
-            <ul class="footerLinkList">
-                <li class="homeLinkSp"><a href="/">HOME</a></li>
-                <li><a href="/sitemap/">サイトマップ</a></li>
-                <li><a href="/sitepolicy/">商標・ロゴ及びサイトご利用上の注意</a></li>
-                <li><a href="/privacy/">個人情報保護方針</a></li>
-                <li><a href="/security_policy/">セキュリティポリシー</a></li>
-                <li><a href="/terms/">利用規約</a></li>
-            </ul>
-            <p class="footerCopyright">Copyright &copy; 2025 Digital Arts Inc.</p>
-        </div>
-    </footer>
-
-    </div>
-
-    
-<!-- Retargeting [Yahoo] -->
-<script type="text/javascript" language="javascript"> /* <![CDATA[ */ var yahoo_retargeting_id = 'LNQ6KAK57L'; var yahoo_retargeting_label = ''; /* ]]> */ </script>
-<script type="text/javascript" language="javascript" src="//b92.yahoo.co.jp/js/s_retargeting.js"></script>
-
-<!-- Retargeting [Google] -->
-<script type="text/javascript"> /* <![CDATA[ */ var google_conversion_id = 968196142; var google_custom_params = window.google_tag_params; var google_remarketing_only = true; /* ]]> */ </script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"> </script>
-<noscript>
-    <div style="display:inline;">
-        <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/968196142/?value=0&amp;guid=ON&amp;script=0" />
-    </div>
-</noscript>
-
-<script type="text/javascript"> // 資料DLリンクのページビュー登録 jQuery(function() { jQuery("a").on("click", function() { var url = this.href; if (url && (url.match(/\.pdf$/) || url.match(/\.txt$/) || url.match(/\.def$/) || url.match(/\.doc/) || url.match(/\.xls/) || url.match(/\.ppt/) || url.match(/\.exe/) || url.match(/\.dmg/) || url.match(/\.apk/) )) { ga('create', 'UA-12542238-1', 'auto'); ga('send', { hitType: 'pageview', location: url }); } }); }); </script>
-
-    <script src="/common/js/dokokara.js?20210318"></script>
-    <script type="text/javascript"> var doko = dokokara.dokokara(); dokokara.pushSameSiteList("daj.jp"); dokokara.pushSameSiteList("finalcode.com"); if (typeof _cam !== 'function') { (function(n) { var w = window, d = document; w['ShanonCAMObject'] = n, w[n] = w[n] || function() { (w[n].q = w[n].q || []).push(arguments) }; w[n].date = 1 * new Date(); var e = d.createElement('script'), t = d.getElementsByTagName('script')[0]; e.async = 1, e.type = 'text/javascript', e.charset = 'utf-8', e.src = 'https://tracker.shanon-services.com/static/js/cam3.js' + "?_=" + w[n].date; t.parentNode.insertBefore(e, t); })('_cam'); _cam('create', 'TeppuCiMYY-381', ['daj.jp', 'finalcode.com']); _cam('require', 'crossLinker'); _cam('crossLinker:allLink', ['daj.jp', 'finalcode.com']); } (function() { if (doko === null) { _cam("send"); return; } _cam("send", { cams_field2: doko.channel, cams_field3: doko.medium, cams_field4: doko.source, cams_field5: doko.campaignName, cams_field6: doko.content, cams_field7: doko.term, cams_field8: doko.rawreferrer, cams_field9: doko.rawquery, }); })(); </script>
-
 </body>
 </html>
